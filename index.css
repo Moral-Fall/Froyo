@@ -9,15 +9,34 @@ body {
     border-radius: 6px;
     background-color: rgba(137, 115, 223, 0.3);
     
-
 }
 
 #flavorBox {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
 h2 {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ticketOutBox {
+    
+    flex-direction: column;
+    align-items: center;
+
+}
+
+button {
+    display: inline-block;
+    width: 100px;
+    padding: 5px 5px;
+    flex-direction: column;
+    align-items: center;    
+
 }

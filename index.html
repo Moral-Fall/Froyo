@@ -13,13 +13,17 @@
 
     <div id="flavorBox">
         <h2>Place Your Order Here:</h2>
-        <pre id="tickeOutBox">...</pre>
-    <form action="submit">
+        <!-- this is being linked to JS logOutPut -->
+    <form action="submit" id="tickeOutBox">
         <label for name>Submit your Order</label>
-        <input for="text"> 
+        <input for="text" id="orderInput" placeholder="Enter your flavors seprated by commas"> 
+        <button type="Submit-Order">Submit Order</button>
     </form>
-    <button type="Submit-Order">Submit Order</button>
     </div>
+        <!--NTS: pre is performance text: keeps breaks/spaces  -->
+    <pre id="orderOutPut">
+
+    </pre>
     
     <script src="index.js"></script>
 </body>
