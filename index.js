@@ -6,8 +6,6 @@ const flavorCount = {
     coffee: 0,
 }
 const userInput = prompt ("Choose your favorite flavor(s) (comma separated): Chocolate, Vanilla, Strawberry, Coffee");
-// Note: going to be adding flavorList to HTML for looks
-const flavorList = userInput.split(",").map(item => item.trim().toLowerCase());
 
 // // NTS: the submit event belongs to form for JS, not the button itself
 const logForm = document.getElementById("ticketOutBox");
