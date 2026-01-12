@@ -5,7 +5,8 @@ const flavorCount = {
     strawberry: 0,
     coffee: 0,
 }
-const userInput = prompt ("Choose your favorite flavor(s) (comma separated): Chocolate, Vanilla, Strawberry, Coffee");
+// using the OR logic since this makes more sense to me. Hope that is okay :)
+flavorCount[flavors] = (flavorCount[flavors] || 0 ) + 1
 
 // // NTS: the submit event belongs to form for JS, not the button itself
 const logForm = document.getElementById("ticketOutBox");
@@ -16,22 +17,15 @@ const logOutPut = document.getElementById("orderOutPut");
 // // NTS: This function is adding the Event(submit) to the form
 logForm.addEventListener("submit", function(event) {
     event.preventDefault();
-    // // NTS: This function is to stop the page from refreshing^
-});
+    // this is grabbing from the textarea in HTML
+const userInput = logInput.value.trim();
 if (userInput === null){
     // textContent: grabs from HTML input
     logOutPut.textContent = "Order canceled. Nothing was logged"; 
 } else {
     const flavorList = userInput
-        .split(",")
+        .split(",") 
         .map(item => item.trim().toLowerCase());
 }
-
-
-for (let flavor of flavorList){
-    if (allowedFlavors.includes(flavor));{
-        flavorCount[flavor] += 1;
-        console.log(flavor);
-    }
-}
+});
 
